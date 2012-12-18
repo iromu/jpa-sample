@@ -17,7 +17,7 @@ public class Parent {
 
     private String name;
 
-    @OneToOne(mappedBy="pare    nt",cascade=CascadeType.PERSIST)
+    @OneToOne(mappedBy="parent",cascade=CascadeType.PERSIST)
     @Getter
     @Setter
     private Child child;
