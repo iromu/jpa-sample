@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/hibernate-configuration">
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.h2.Driver</property>
+        <property name="hibernate.connection.url">jdbc:h2:~/main</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="hibernate.show_sql">true</property>
+        <mapping resource="jpa/persistence/model/*"/>
+    </session-factory>
+</hibernate-configuration>
+
