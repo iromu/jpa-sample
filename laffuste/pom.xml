@@ -10,6 +10,8 @@
     <artifactId>laffuste</artifactId>
     <packaging>jar</packaging>
 
+    <description>Simple Parent-Child relationship with cascade save demo.</description>
+
     <dependencies>
         <dependency>
             <groupId>com.h2database</groupId>
