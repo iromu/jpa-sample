@@ -8,12 +8,27 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <id>iromu</id>
+            <name>Iván Rodríguez Murillo</name>
+            <email>wantez@gmail.com</email>
+            <url>http://masterbranch.com/iromu</url>
+        </developer>
+    </developers>
+
+    <ciManagement>
+        <url>https://buildhive.cloudbees.com/job/iromu/job/jpa-sample/</url>
+        <system>Jenkins</system>
+    </ciManagement>
+
     <properties>
         <spring.version>3.2.2.RELEASE</spring.version>
         <spring-data-jpa.version>1.3.0.RELEASE</spring-data-jpa.version>
         <jpa.version>2.0.0</jpa.version>
         <junit.version>4.11</junit.version>
         <hibernate.version>4.2.0.Final</hibernate.version>
+        <eclipselink.version>2.4.0</eclipselink.version>
         <h2.version>1.3.171</h2.version>
         <slf4j.version>1.7.5</slf4j.version>
         <aspectj.version>1.7.2</aspectj.version>
@@ -26,6 +41,7 @@
 
     <modules>
         <module>laffuste</module>
+        <module>eclipselink</module>
     </modules>
 
     <build>
@@ -244,4 +260,11 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>EclipseLink</id>
+            <url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
+        </repository>
+    </repositories>
 </project>
