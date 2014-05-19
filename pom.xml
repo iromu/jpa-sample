@@ -28,7 +28,7 @@
         <jpa.version>2.0.0</jpa.version>
         <junit.version>4.11</junit.version>
         <hibernate.version>4.2.0.Final</hibernate.version>
-        <eclipselink.version>2.4.0</eclipselink.version>
+        <eclipselink.version>2.5.1</eclipselink.version>
         <h2.version>1.3.171</h2.version>
         <slf4j.version>1.7.5</slf4j.version>
         <aspectj.version>1.7.2</aspectj.version>
@@ -263,6 +263,10 @@
             <artifactId>logback-classic</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
