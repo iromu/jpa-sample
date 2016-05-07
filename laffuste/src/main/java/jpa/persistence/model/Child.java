@@ -1,35 +1,58 @@
 package jpa.persistence.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.*;
 
 /**
  * @author irodriguezm
  */
 @Entity
-@NoArgsConstructor
 public class Child {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Getter
     private Long id;
 
-    @Getter
     private String name;
 
-    @Getter
     private String random;
 
     @OneToOne(cascade=CascadeType.PERSIST)
-    @Setter
     private Parent parent;
 
     public Child(String name, String random) {
         this.name = name;
         this.random = random;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRandom() {
+        return random;
+    }
+
+    public void setRandom(String random) {
+        this.random = random;
+    }
+
+    public Parent getParent() {
+        return parent;
+    }
+
+    public void setParent(Parent parent) {
+        this.parent = parent;
     }
 }
