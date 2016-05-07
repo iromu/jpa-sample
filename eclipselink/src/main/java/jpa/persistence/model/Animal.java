@@ -1,8 +1,6 @@
 package jpa.persistence.model;
 
 import jpa.persistence.customizer.AnimalCustomizer;
-import lombok.Getter;
-import lombok.Setter;
 import org.eclipse.persistence.annotations.Customizer;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
@@ -20,12 +18,8 @@ public class Animal extends AbstractPersistable<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Getter
-    @Setter
     private Long id;
 
-    @Getter
-    @Setter
     private String name;
 
     public Animal(String name) {
@@ -34,5 +28,23 @@ public class Animal extends AbstractPersistable<Long> {
 
     public Animal() {
 
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

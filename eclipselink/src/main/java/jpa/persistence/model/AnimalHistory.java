@@ -1,11 +1,8 @@
 package jpa.persistence.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.data.jpa.domain.AbstractPersistable;
-
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * User: wantez
@@ -18,25 +15,55 @@ public class AnimalHistory implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
     private Long pk;
 
-    @Getter
-    @Setter
     private String id;
 
-    @Getter
-    @Setter
     private String name;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Getter
-    @Setter
     private java.util.Date start;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Getter
-    @Setter
     private java.util.Date end;
+
+    public Long getPk() {
+        return pk;
+    }
+
+    public void setPk(Long pk) {
+        this.pk = pk;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Date getStart() {
+        return start;
+    }
+
+    public void setStart(Date start) {
+        this.start = start;
+    }
+
+    public Date getEnd() {
+        return end;
+    }
+
+    public void setEnd(Date end) {
+        this.end = end;
+    }
 }
